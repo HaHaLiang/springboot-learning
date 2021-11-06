@@ -1,17 +1,11 @@
 package com.example.api.controller;
 
 
-
+import com.example.client.SqrtUtil;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.concurrent.atomic.AtomicLong;
 
-/**
- * @Desc: HelloWorldController
- * @Author: jzman
- */
-//@controller
-//@ResponseBody
+
 @RestController
 public class HelloWorldController {
 
@@ -31,9 +25,13 @@ public class HelloWorldController {
     @RequestMapping(value = "/helloworld2", method = {RequestMethod.GET, RequestMethod.POST})
     public String message2(
             @RequestParam(name = "author") String author,
-            @RequestParam(name = "message") String message
-    ) {
+            @RequestParam(name = "message") String message) {
         return String.valueOf(counter.incrementAndGet()) + author + message;
+    }
+
+    @RequestMapping(value = "/sqrt", method = {RequestMethod.GET, RequestMethod.POST})
+    public String sqrt(@RequestParam(name = "value") Integer value) {
+        return String.valueOf(SqrtUtil.getSqrtVal(value));
     }
 
 }

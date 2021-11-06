@@ -1,10 +1,8 @@
 package com.example.client;
 
-
-
 public class SqrtUtil {
 
-    public static int sqrt(int x) {
+    public static int getSqrtVal(int x) {
         return x * x;
     }
 
