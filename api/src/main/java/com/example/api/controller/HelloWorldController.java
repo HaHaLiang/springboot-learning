@@ -1,7 +1,8 @@
 package com.example.api.controller;
 
 
-import com.example.client.SqrtUtil;
+import com.example.service.impl.SqrtServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -11,7 +12,8 @@ public class HelloWorldController {
 
     private final AtomicLong counter = new AtomicLong();
 
-//    @RequestMapping(value = "/message", method = RequestMethod.GET)
+    @Autowired
+    private SqrtServiceImpl sqrtServiceImpl;
 
     /**
      * @RequestParam(name = "author", defaultValue = "jzman") String author,
@@ -31,7 +33,7 @@ public class HelloWorldController {
 
     @RequestMapping(value = "/sqrt", method = {RequestMethod.GET, RequestMethod.POST})
     public String sqrt(@RequestParam(name = "value") Integer value) {
-        return String.valueOf(SqrtUtil.getSqrtVal(value));
+        return String.valueOf(sqrtServiceImpl.getSqrtVal(value));
     }
 
 
