@@ -5,10 +5,10 @@
 
 
     <groupId>com.example</groupId>
-    <artifactId>client</artifactId>
+    <artifactId>service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>client</name>
-    <description>client Demo project for Spring Boot</description>
+    <name>service</name>
+    <description>service project for Spring Boot</description>
     <parent>
         <groupId>com.example</groupId>
         <artifactId>springboot-learning</artifactId>
