@@ -12,6 +12,7 @@
 	<artifactId>repository</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>repository</name>
+	<packaging>jar</packaging>
 	<description>jdbc Demo project for Spring Boot</description>
 
 	<properties>

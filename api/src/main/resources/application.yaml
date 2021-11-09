@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: test
+# spring.profiles.active 表示激活哪个环境.环境 list 需要在下边定义
+
+---
+server:
+  port: 8081
+#spring:
+#  profiles: dev
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+server:
+  port: 8082
+#spring:
+#  profiles: test
+spring:
+  config:
+    activate:
+      on-profile: test
