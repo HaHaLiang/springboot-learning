@@ -62,8 +62,8 @@ pom.xml 的 parent 标签中，依赖父 pom1：spring-boot-starter-parent，再
     ```
 7. controller 层 new TitlesServiceImpl对象调用方法
 8. 在程序主入口增加几个注解
-``` java
-@EnableJpaRepositories("com.example.repository") // 用于Srping JPA的代码配置
-@EntityScan(basePackages = {"com.example.entity"}) //用来扫描和发现指定包及其子包中的Entity定义
-@PropertySource("classpath:application.yaml") //配置路径
-```
+    ``` java
+    @EnableJpaRepositories("com.example.repository") // 用于Srping JPA的代码配置
+    @EntityScan(basePackages = {"com.example.entity"}) //用来扫描和发现指定包及其子包中的Entity定义
+    @PropertySource("classpath:application.yaml") //配置路径
+    ```
