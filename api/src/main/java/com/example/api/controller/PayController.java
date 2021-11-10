@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController("/payment")
+@RestController()
+@RequestMapping("/payment")
 public class PayController {
 
     @RequestMapping(value = "/queryPayAccount", method = {RequestMethod.GET, RequestMethod.POST})

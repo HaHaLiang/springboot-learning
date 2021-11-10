@@ -9,7 +9,6 @@ import javax.annotation.Resource;
 import java.util.Optional;
 
 
-// NOTE
 @Service
 public class TitlesServiceImpl implements TitlesInterface {
 
