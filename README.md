@@ -46,6 +46,7 @@ pom.xml 的 parent 标签中，依赖父 pom1：spring-boot-starter-parent，再
        @GeneratedValue
        具体字段...
    ```
+   - 枚举类型需要增加 enum 类,然后在 entity 类的属性中增加注解`@Enumerated(EnumType.STRING)`
 4. repository 模块中建立 dao 接口类,添加注解`@Repository`并继承 JpaRepository,泛型传入TitlesEntity:`public interface TitlesDao extends JpaRepository<TitlesEntity, Long>`
 5. service 层 pom.xml 增加对repository的依赖
 6. service 层增加接口类,定义要对数据库执行操作的方法; 
